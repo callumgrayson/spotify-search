@@ -16,10 +16,18 @@ function ArtistDetails({ artist, details, setDetails }) {
   //       fetchData();
   //     }
   //   }, [artist, details, setDetails]);
+  if (!artist) return null;
 
   return (
     <div>
-      <pre>{JSON.stringify(artist, null, 2)}</pre>
+      <h4>{artist.name}</h4>
+      <p>Followers {artist.followers.total}</p>
+      <p>Popularity {artist.popularity}</p>
+      <img src={artist.images[2].url} alt={`Artist: ${artist.name}`} />
+      <a href={artist.external_urls.spotify} target="_blank" rel="noreferrer">
+        Visit in Spotify
+      </a>
+      {/* <pre>{JSON.stringify(artist, null, 2)}</pre> */}
     </div>
   );
 }

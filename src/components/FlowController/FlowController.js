@@ -59,6 +59,11 @@ function FlowController() {
     }
   }, [genre]);
 
+  useEffect(() => {
+    // Fetch genres
+    getGenres();
+  }, []);
+
   //   console.log("artistDetails", artistDetails);
 
   return (
