@@ -5,6 +5,17 @@ This is a project for a front end assignment. It uses the Spotify API to search 
 ## Planning
 
 - Initialize project using create-react-app and repository in GitHub.
+- Set up Spotify API access.
+- Set up Spotify API keys in app.
+- Set up CONSTANTS file.
+- Set up helpers file.
+- Swappables
+  - fetch function
+  - input component
+  - genre list
+  - genre button/link
+  - genre component
+- Add instructions for adding credentials for testing locally: client_id & client_secret
 
 ## Execution Log
 
