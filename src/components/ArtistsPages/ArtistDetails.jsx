@@ -21,12 +21,14 @@ function ArtistDetails({ artist, details, setDetails }) {
   return (
     <div>
       <h4>{artist.name}</h4>
-      <p>Followers {artist.followers.total}</p>
-      <p>Popularity {artist.popularity}</p>
+      <p>Followers {Number(artist.followers.total).toLocaleString()}</p>
+      <p>Popularity {Number(artist.popularity)}</p>
       <img src={artist.images[2].url} alt={`Artist: ${artist.name}`} />
-      <a href={artist.external_urls.spotify} target="_blank" rel="noreferrer">
-        Visit in Spotify
-      </a>
+      <p>
+        <a href={artist.external_urls.spotify} target="_blank" rel="noreferrer">
+          Visit in Spotify
+        </a>
+      </p>
       {/* <pre>{JSON.stringify(artist, null, 2)}</pre> */}
     </div>
   );

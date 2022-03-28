@@ -79,7 +79,7 @@ function FlowController() {
       <div className="options-container">
         <div className="genres-container">
           <h4>Genres</h4>
-          <button onClick={getGenres}>Get Genres</button>
+          {/* <button onClick={getGenres}>Get Genres</button> */}
           <GenresList
             genresList={genresList}
             handleSetGenre={handleSetGenre}

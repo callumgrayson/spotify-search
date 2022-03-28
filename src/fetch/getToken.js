@@ -19,7 +19,7 @@ async function fetchToken(clientId, clientSecret) {
 
     const response = await fetch(getTokenUrl, requestOptions);
     const json = await response.json();
-    console.log("json from fetch: ", json);
+    // console.log("json from fetch: ", json);
     const { access_token, expires_in } = json;
 
     const newToken = {
@@ -51,8 +51,8 @@ async function getToken(clientId, clientSecret) {
     // console.log("json", json);
     const { expires_at } = json;
     // console.log("expires_at, access_token", expires_at, access_token);
-    console.log("Date.now()", Date.now());
-    console.log("expires_at", expires_at);
+    // console.log("Date.now()", Date.now());
+    // console.log("expires_at", expires_at);
     if (Number(Date.now()) < Number(expires_at)) {
       console.log("returning access_token from localStorage");
       return json;
