@@ -1,10 +1,14 @@
-import React from "react";
+import FlowController from "../FlowController/FlowController";
+import AppHeading from "../Headings/AppHeading";
 import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <h3>Spotify Search</h3>
+      <div className="sizer">
+        <AppHeading text={"Spotify Search"} />
+        <FlowController />
+      </div>
     </div>
   );
 }
