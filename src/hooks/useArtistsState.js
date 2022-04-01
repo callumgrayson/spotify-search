@@ -10,30 +10,12 @@ function useArtistsState() {
     // handle newly fetched artists
     try {
       const newPage = fetchState?.data?.artists;
-      // console.log("newPage", newPage);
 
       if (newPage) {
-        const decoded = decodeURI(newPage.href);
-        // console.log("decoded", decoded);
         const search = newPage.href.split("?")[1];
-        // console.log("search", search);
         const urlParams = new URLSearchParams(search);
-        // const urlParams = new URLSearchParams(
-        //   "?product=shirt&color=blue&newuser&size=m"
-        // );
-        // console.log("urlParams", urlParams);
-        const keys = urlParams.keys();
-        const entries = urlParams.entries();
-        for (const key of keys) {
-          // console.log("key", key);
-        }
-        for (const entry of entries) {
-          // console.log("entry", entry);
-        }
-        // console.log("keys", keys);
         const query = urlParams.get("query");
         const urlGenre = query.split(":")[1];
-        // console.log("urlGenre", urlGenre);
         if (!urlGenre) return;
 
         if (!artistsLists[urlGenre]) {
@@ -47,7 +29,6 @@ function useArtistsState() {
         }
 
         const currentHrefs = artistsLists[urlGenre].map((item) => item.href);
-        // console.log("currentHrefs", currentHrefs);
 
         // check href is not already in the list
         if (currentHrefs.includes(newPage.href)) return;
@@ -65,6 +46,7 @@ function useArtistsState() {
     } catch (error) {
       console.log("error adding newly fetched artists", error);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fetchState]);
 
   function triggerArtists(genre) {
@@ -89,7 +71,6 @@ function useArtistsState() {
           const len = pagesArray.length;
           const last = pagesArray[len - 1];
           const nextUrl = last.next;
-          // console.log("nextUrl", nextUrl);
           triggerFetch(nextUrl);
         } catch (error) {
           console.log(

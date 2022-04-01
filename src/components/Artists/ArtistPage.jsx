@@ -1,5 +1,4 @@
-import React from "react";
-import Artist from "../ArtistsPages/Artist";
+import Artist from "./Artist";
 
 function ArtistPage({ page, artistDetailsSetter, artistDetails }) {
   if (page && page.items && page.items.length === 0) {

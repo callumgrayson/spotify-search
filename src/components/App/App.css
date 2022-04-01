@@ -13,8 +13,6 @@ button {
 }
 
 .App {
-  /* background-color: aquamarine; */
-  /* border: 1px solid black; */
   height: 100vh;
   padding: 2% 1rem;
   display: flex;
@@ -27,68 +25,47 @@ button {
 
 .app-heading {
   height: 6%;
-  /* border: 1px solid black; */
 }
 
 .app-heading h1 {
   padding: 0;
   margin: 0;
-  /* border: 1px solid black; */
 }
 
 .section-heading {
   height: 10%;
-  /* border: 1px solid black; */
+
   display: flex;
   align-items: center;
 }
-.section-heading h2 {
-  /* border: 1px solid black; */
-}
 
 .options-container {
-  /* border: 1px solid red; */
   display: flex;
   height: 95%;
-  /* border: 1px solid black; */
 }
 .section-container {
   flex: 1;
   height: 100%;
-  /* padding: 0 1rem; */
   padding-left: 20px;
   margin-right: 20px;
   background-color: #f1f1f1;
 }
-.genres-container {
-  /* border: 1px solid red; */
-}
-.artists-container {
-  /* border: 1px solid red; */
-}
-.artists-details-container {
-  /* border: 1px solid red; */
-}
 
 .genres-list,
 .artists-list {
-  /* border: 1px solid red; */
   height: 90%;
   overflow-y: auto;
-}
-
-.genres-list .selected {
+  padding-bottom: 40px;
 }
 
 .more-button {
-  width: 100%;
+  width: calc(100% - 20px);
   height: 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* border: 1px solid #ccc; */
   background-color: #ddd;
-  margin: 1rem 0;
+  margin-top: 20px;
   border-radius: 0.5rem;
 }
 

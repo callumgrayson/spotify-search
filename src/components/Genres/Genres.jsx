@@ -11,11 +11,8 @@ function Genres({ genre, setGenre }) {
     setGenre(newGenre);
   }
 
-  // Loading
   if (loading) return <Loading />;
-  // Error
   if (error) return <Error error={error} />;
-  // Data
   if (data)
     return (
       <GenresList
@@ -24,6 +21,7 @@ function Genres({ genre, setGenre }) {
         selectedGenre={genre}
       />
     );
+
   // Default
   return null;
 }

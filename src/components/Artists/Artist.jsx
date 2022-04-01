@@ -1,11 +1,6 @@
-// import { useState } from "react";
-import ArtistDetails from "./ArtistDetails";
 import isSelected from "./isSelected";
 
 function Artist({ artist, artistDetailsSetter, artistDetails }) {
-  // const [details, setDetails] = useState(null);
-  // const [showArtistDetails, setShowArtistDetails] = useState(false);
-
   if (artist?.name) {
     return (
       <div>

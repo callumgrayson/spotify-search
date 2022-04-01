@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import ArtistPage from "./ArtistPage";
 import Error from "../Error/Error";
 import Loading from "../Loading/Loading";
@@ -11,17 +11,15 @@ function Artists({ setArtistDetails, artistDetails, genre }) {
 
   useEffect(() => {
     setterArtists(genre);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [genre]);
 
   function fetchMore() {
     setterArtists(genre);
   }
 
-  // Loading
   if (loading && !data[genre]) return <Loading />;
-  // Error
   if (error) return <Error error={error} />;
-  // Data
   if (data && data[genre])
     return (
       <div className="artists-list">
@@ -41,6 +39,7 @@ function Artists({ setArtistDetails, artistDetails, genre }) {
         ) : null}
       </div>
     );
+
   // Default
   return (
     <div>

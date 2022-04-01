@@ -1,6 +1,6 @@
 import FlowController from "../FlowController/FlowController";
-import "./App.css";
 import AppHeading from "../Headings/AppHeading";
+import "./App.css";
 
 function App() {
   return (

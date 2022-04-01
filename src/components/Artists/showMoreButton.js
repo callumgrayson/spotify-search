@@ -7,10 +7,8 @@ function showMoreButton(inObject) {
       return true;
     }
   } catch (error) {
-    console.log("error - showMoreButton", error);
+    return false;
   }
-
-  return false;
 }
 
 export default showMoreButton;

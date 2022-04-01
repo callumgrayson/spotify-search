@@ -2,8 +2,6 @@ const spotifyAccessToken = "spotify_access_token";
 
 const spotifyClientId = process.env.REACT_APP_CLIENT_ID;
 const spotifyClientSecret = process.env.REACT_APP_CLIENT_SECRET;
-// console.log("spotifyClientId", spotifyClientId);
-// console.log("spotifyClientSecret", spotifyClientSecret);
 
 async function fetchToken(clientId, clientSecret) {
   try {
@@ -62,20 +60,12 @@ async function clearAndFetchToken(clientId, clientSecret) {
 async function getToken() {
   // Get Storage Item
   const spotify_access_token = localStorage.getItem(spotifyAccessToken);
-  // console.log("spotify_access_token", spotify_access_token);
 
   // Check stored token
   if (spotify_access_token) {
     const json = JSON.parse(spotify_access_token);
-    // console.log("json", json);
     const { access_token, expires_at } = json;
-    // console.log("expires_at", expires_at);
 
-    // console.log("Date.now()", Date.now());
-    // console.log(
-    //   "Number(Date.now()) < Number(expires_at)",
-    //   Number(Date.now()) < Number(expires_at)
-    // );
     if (Number(Date.now()) < Number(expires_at)) {
       // console.log("returning access_token from localStorage");
       return access_token;
@@ -86,7 +76,6 @@ async function getToken() {
       spotifyClientId,
       spotifyClientSecret
     );
-    // console.log("accessToken", accessToken);
     return accessToken;
   }
 
@@ -95,7 +84,6 @@ async function getToken() {
     spotifyClientId,
     spotifyClientSecret
   );
-  // console.log("accessToken", accessToken);
   return accessToken;
 }
 
