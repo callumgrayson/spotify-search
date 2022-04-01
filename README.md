@@ -9,8 +9,8 @@ This is a project for a front end assignment. It uses the Spotify API to search 
 - Get your Spotify `client_id` and `client_secret`
 - Add a file in the root directory named: `.env.development.local`
 - Into this file add these variables:\
-   REACT_APP_CLIENT_ID=\<`insert-your-client-id`>\
-   REACT_APP_CLIENT_SECRET=\<`insert-your-client-secret`>
+   REACT_APP_CLIENT_ID=`<insert-your-client-id>`\
+   REACT_APP_CLIENT_SECRET=`<insert-your-client-secret>`
 - `npm start` to run the app in the browser
 
 ---
