@@ -1,27 +1,31 @@
 // import { useState } from "react";
 import ArtistDetails from "./ArtistDetails";
+import isSelected from "./isSelected";
 
-function Artist({ artist, artistDetailsSetter }) {
+function Artist({ artist, artistDetailsSetter, artistDetails }) {
   // const [details, setDetails] = useState(null);
   // const [showArtistDetails, setShowArtistDetails] = useState(false);
-  return (
-    <div>
+
+  if (artist?.name) {
+    return (
       <div>
-        <span>{artist.id}</span>
-        <span> - </span>
-        <button onClick={() => artistDetailsSetter(artist)}>
+        <button
+          onClick={() => artistDetailsSetter(artist)}
+          className={[
+            "option-button",
+            isSelected(artistDetails, artist) ? "selected" : "",
+          ].join(" ")}
+        >
+          {isSelected(artistDetails, artist) ? (
+            <span className="indicator">&#129078;</span>
+          ) : null}
           {artist.name}
         </button>
-        {/* {showArtistDetails ? (
-          <ArtistDetails
-            artist={artist}
-            details={details}
-            setDetails={setDetails}
-          />
-        ) : null} */}
       </div>
-    </div>
-  );
+    );
+  }
+
+  return null;
 }
 
 export default Artist;

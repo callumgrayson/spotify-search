@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import fetchBase from "../../fetch/fetchBase";
-import fetchGenres from "../../fetch/fetchGenres";
-import fetchArtists from "../../fetch/fetchArtists";
+import fetchBase from "../../fetch/fetchBase0";
+import fetchGenres from "../../fetch/fetchGenres0";
+import fetchArtists from "../../fetch/fetchArtists0";
 import ArtistsPages from "../ArtistsPages/ArtistsPages";
 import GenresList from "../Genres/GenresList";
 import ArtistDetails from "../ArtistsPages/ArtistDetails";

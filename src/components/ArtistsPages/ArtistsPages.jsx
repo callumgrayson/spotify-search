@@ -1,5 +1,5 @@
 import React from "react";
-import ArtistPage from "./ArtistPage";
+import ArtistPage from "../Artists/ArtistPage";
 
 function ArtistsPages({ list, artistDetailsSetter }) {
   // console.log("list", list);

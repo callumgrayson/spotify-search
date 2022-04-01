@@ -1,4 +1,4 @@
-import fetchBase from "../fetch/fetchBase";
+import fetchBase from "./fetchBase0";
 import CONSTANTS from "../CONSTANTS";
 
 const spotifyGenresList = "spotify_genres_list";

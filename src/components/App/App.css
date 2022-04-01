@@ -1,16 +1,113 @@
-.options-container {
-  border: 1px solid red;
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.App {
+  /* background-color: aquamarine; */
+  /* border: 1px solid black; */
+  height: 100vh;
+  padding: 2% 1rem;
   display: flex;
+  justify-content: center;
+}
+.sizer {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.app-heading {
+  height: 6%;
+  /* border: 1px solid black; */
+}
+
+.app-heading h1 {
+  padding: 0;
+  margin: 0;
+  /* border: 1px solid black; */
+}
+
+.section-heading {
+  height: 10%;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+}
+.section-heading h2 {
+  /* border: 1px solid black; */
+}
+
+.options-container {
+  /* border: 1px solid red; */
+  display: flex;
+  height: 95%;
+  /* border: 1px solid black; */
+}
+.section-container {
+  flex: 1;
+  height: 100%;
+  /* padding: 0 1rem; */
+  padding-left: 20px;
+  margin-right: 20px;
+  background-color: #f1f1f1;
 }
 .genres-container {
-  border: 1px solid red;
-  flex: 1;
+  /* border: 1px solid red; */
 }
 .artists-container {
-  border: 1px solid red;
-  flex: 1;
+  /* border: 1px solid red; */
 }
 .artists-details-container {
-  border: 1px solid red;
-  flex: 1;
+  /* border: 1px solid red; */
+}
+
+.genres-list,
+.artists-list {
+  /* border: 1px solid red; */
+  height: 90%;
+  overflow-y: auto;
+}
+
+.genres-list .selected {
+}
+
+.more-button {
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid #ccc; */
+  background-color: #ddd;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+}
+
+.more-button .entity {
+  font-size: 20px;
+}
+
+.selected {
+  background-color: #1ed760;
+}
+
+.option-button {
+  text-transform: capitalize;
+  position: relative;
+  padding: 2px 30px;
+  margin: 2px 0;
+}
+
+.option-button .indicator {
+  margin-left: -16px;
+  margin-right: 4px;
 }
